@@ -1,0 +1,104 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence and Data Science Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-3">
+    <h2 class="text-center mb-4">Artificial Intelligence and Data Science Course</h2>
+
+    <!-- Course Overview Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Overview</h5>
+                    <p class="card-text">
+                        This course provides a detailed exploration of the core concepts and practical applications of Artificial Intelligence (AI) and Data Science (DS), emphasizing data analysis, machine learning techniques, and the creation of data-driven AI models.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Details Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Details</h5>
+                    <p><strong>Description:</strong> This course delves into the intersection of AI and Data Science, covering data processing, machine learning algorithms, statistical analysis, and the development of intelligent systems capable of handling complex data challenges.</p>
+                    <p><strong>Duration:</strong> 4 years</p>
+                    <p><strong>Price:</strong> 4 Lakhs</p>
+                    <p><strong>Instructor(s):</strong> Dr. G, Dr. H, Prof. I, Dr. J, Dr. K, Prof. L</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Syllabus Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Syllabus</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester (NLP): <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/aids_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timetable Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Timetable</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester (NLP): <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/aids_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

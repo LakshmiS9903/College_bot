@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil and Environmental Engineering Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Civil and Environmental Engineering Course</h2>
+    <div class="row">
+        <!-- Course Overview -->
+        <div class="col-md-12 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Overview</h5>
+                    <p class="card-text">
+                        This course offers a comprehensive study of Civil and Environmental Engineering, focusing on the design, development, and maintenance of sustainable infrastructure, as well as understanding environmental impacts and solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Details Card -->
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Details</h5>
+                    <p><strong>Description:</strong> This course bridges civil engineering and environmental science, focusing on sustainable practices, structural design, water resources management, and ecological impact analysis. Students will gain knowledge to innovate and implement solutions for modern infrastructure while ensuring environmental preservation.</p>
+                    <p><strong>Duration:</strong> 4 years</p>
+                    <p><strong>Price:</strong> 3.5 Lakhs</p>
+                    <p><strong>Prerequisites:</strong> Background in physics, mathematics, and basic engineering concepts.</p>
+                    <p><strong>Instructor(s):</strong> Dr. M, Dr. N, Prof. O, Dr. P, Dr. Q, Prof. R</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Syllabus Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Syllabus</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/civ_first_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/civ_second_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/civ_third_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/civ_fourth_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester: <a href="{% static 'pdfs/civ_fifth_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/civ_sixth_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/civ_seventh_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/civ_eighth_semester_syllabus.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timetable Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Timetable</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/civ_first_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/civ_second_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/civ_third_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/civ_fourth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester: <a href="{% static 'pdfs/civ_fifth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/civ_sixth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/civ_seventh_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/civ_eighth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>
+
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

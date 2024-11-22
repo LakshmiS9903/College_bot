@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MUSE{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        .navbar-custom {
+            background: #1B3409;
+        }
+        .navbar-nav .nav-item {
+            margin-right: 12px; /* Spacing between items */
+        }
+        body {
+            background: #EBF7E3; 
+            font-family: 'Arial', sans-serif;
+            color: white; /* White text for contrast */
+        }
+        .container {
+            background: #1B3409;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+            padding: 40px; /* Increased padding */
+            margin-top: 90px; /* Spacing from top */
+            max-width: 900px; /* Limit the width */
+            margin-left: auto; /* Centering */
+            margin-right: auto; /* Centering */
+        }
+        h1 {
+            color:greenyellow ; 
+            margin-bottom: 60px; /* Spacing below heading */
+            font-size: 2.5em; /* Larger heading */
+            text-align: center; /* Center the heading */
+        }
+        p {
+            font-size: 1.2em; /* Larger text for paragraphs */
+            line-height: 1.6; /* Improved line height for readability */
+            color: whitesmoke; /* Dark blue for paragraph text */
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 12px 25px; /* Larger button size */
+            background-color: #FF3B30; /* Red for the primary button */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none; /* No underline */
+            transition: background-color 0.3s; /* Smooth transition */
+            font-size: 1.2em; /* Larger text for button */
+        }
+        .cta-btn:hover {
+            background-color: #D72E23; /* Darker red shade on hover */
+        }
+        .navbar-nav .nav-link {
+            color: white !important; /* Ensures white color for links */
+        }
+        .navbar-brand {
+            color: white !important; /* Ensures white color for the brand text */
+        }
+        @media (max-width: 576px) {
+            .navbar-nav {
+                text-align: center; /* Center navigation on small screens */
+            }
+            .navbar-nav .nav-item {
+                margin: 5px 0; /* Spacing between nav items */
+            }
+        }
+        .chatbot-container {
+            background-color: #333;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .chatbot-header {
+            text-align: center;
+            font-size: 1.5em;
+            color: #FF3B30;
+        }
+        .chatbot-content {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+        .chatbot-btn {
+            background-color: #FF3B30;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        .chatbot-btn:hover {
+            background-color: #D72E23;
+        }
+    </style>
+</head>
+<body>
+    <!-- Full-width Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mysore University School Of Engineering</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'courses' %}">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://results.uomexam.com" target="_blank">Results</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content block -->
+    {% block content %}
+    <div class="container">
+        <h1>Welcome To MUSE Chat</h1>
+        <p>Hello! I'm here to help you explore all that our university has to offer. Whether you have questions about our diverse engineering courses, the vibrant campus life, admissions requirements, or upcoming events, I’m here to provide quick and reliable answers. Discover details about student clubs, campus facilities, academic departments, and more—all at your fingertips. Click on Start, and let me guide you through everything you need to know about life at Mysore University School of Engineering.</p>    
+
+        <!-- Add a button that links to the chatbot view -->
+        <a href="{% url 'chatbot' %}" class="cta-btn">Ask the Chatbot</a> <!-- This button links to the chatbot page -->
+    </div>
+
+
+    {% endblock %}
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

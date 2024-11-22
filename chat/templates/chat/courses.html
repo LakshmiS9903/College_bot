@@ -1,0 +1,51 @@
+{% extends 'chat/index.html' %}
+
+{% block title %}
+Courses Offered
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Header Section -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Courses Offered</h2>
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+    </div>
+
+    <div class="row">
+        {% for course in courses %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <!-- Course Card -->
+            <div class="card h-100" style="background-color: #B2F7C5; color: black;"> <!-- Light Green background with black text -->
+                <div class="card-body">
+                    <h5 class="card-title" style="color: red;">{{ course.title }}</h5> <!-- Red color for course titles -->
+                    <p class="card-text" style="color: black;"> <!-- Black color for description text -->
+                        {% if course.description|length > 150 %}
+                            {{ course.description|slice:":150" }}... <!-- Show first 150 characters of the description -->
+                        {% else %}
+                            {{ course.description }}
+                        {% endif %}
+                    </p>
+                    
+                    <!-- Dynamic View Details button based on course title -->
+                    {% if course.title == 'Artificial Intelligence And Data Science' %}
+                        <a href="{% url 'aids' %}" class="btn btn-primary">View Details</a>
+                    {% elif course.title == 'Artificial Intelligence And Machine Learning' %}
+                        <a href="{% url 'aiml' %}" class="btn btn-primary">View Details</a>
+                    {% elif course.title == 'Biomedical And Robotics' %}
+                        <a href="{% url 'bio' %}" class="btn btn-primary">View Details</a>
+                    {% elif course.title == 'Computer Science And Design Engineering' %}
+                        <a href="{% url 'csd' %}" class="btn btn-primary">View Details</a>
+                    {% elif course.title == 'Civil And Environmental Engineering' %}
+                        <a href="{% url 'civ' %}" class="btn btn-primary">View Details</a>
+                    {% else %}
+                        <!-- Default button if no match -->
+                        <a href="{% url 'courses'  %}" class="btn btn-primary">View Details</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

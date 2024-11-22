@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #EBF7E3; /* Matches the main background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-card {
+            background-color: lightgray; /* Matches container background */
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .login-card h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: red; /* Changed to red for better appeal */
+        }
+
+        .form-control {
+            border-radius: 50px;
+            padding: 10px 20px;
+            border: 1px solid greenyellow; /* Green border for input fields */
+            background-color: #F5F5F5; /* Light gray for input background */
+            color: #1B3409; /* Dark text for readability */
+        }
+
+        .btn-primary {
+            background-color:white; /* Red background for primary button */
+            border-color: #FF3B30;
+            border-radius: 50px;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1rem;
+            color: blue;
+        }
+
+        .btn-primary:hover {
+            background-color: #D72E23; /* Darker red on hover */
+            border-color: #D72E23;
+        }
+
+        .btn-secondary {
+            background-color: white; /* Matches secondary button color */
+            color: blue; /* Dark text for contrast */
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 50px;
+            padding: 10px 0;
+        }
+
+        .btn-secondary:hover {
+            background-color: grey; /* Slightly lighter green on hover */
+        }
+
+        .back-home-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .forgot-password-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 576px) {
+            .login-card {
+                padding: 20px;
+            }
+
+            .login-card h1 {
+                font-size: 1.8rem;
+            }
+
+            .form-control, .btn-primary, .btn-secondary {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Login</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <div class="forgot-password-link">
+            <a href="{% url 'password_reset' %}" class="btn btn-secondary">Forgot Password?</a>
+        </div>
+        <!-- Added Back to Home button -->
+        <div class="back-home-link">
+            <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

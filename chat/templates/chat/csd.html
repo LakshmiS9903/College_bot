@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science and Design Engineering Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Computer Science and Design Engineering Course</h2>
+
+    <!-- Course Overview Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Overview</h5>
+                    <p class="card-text">
+                        This course blends core Computer Science concepts with principles of design, focusing on developing innovative solutions that integrate technology and creative design. Students will learn programming, user-centric design, and modern software development practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Details Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Course Details</h5>
+                    <p><strong>Description:</strong> This interdisciplinary course combines computer science fundamentals with design principles, teaching students how to create intuitive and aesthetically pleasing software solutions that prioritize user experience and innovative technology.</p>
+                    <p><strong>Duration:</strong> 4 years</p>
+                    <p><strong>Price:</strong> 4.2 Lakhs</p>
+                    <p><strong>Prerequisites:</strong> Basic programming experience, an understanding of design concepts, and mathematical foundations.</p>
+                    <p><strong>Instructor(s):</strong> Dr. S, Dr. T, Prof. U, Dr. V, Dr. W, Prof. X</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Syllabus Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Syllabus</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/csd_first_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/csd_second_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/csd_third_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/csd_fourth_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester: <a href="{% static 'pdfs/csd_fifth_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/csd_sixth_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/csd_seventh_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/csd_eighth_semester.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timetable Download Card -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Timetable</h5>
+                    <ul>
+                        <li>First Semester: <a href="{% static 'pdfs/csd_first_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Second Semester: <a href="{% static 'pdfs/csd_second_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Third Semester: <a href="{% static 'pdfs/csd_third_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fourth Semester: <a href="{% static 'pdfs/csd_fourth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Fifth Semester: <a href="{% static 'pdfs/csd_fifth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Sixth Semester: <a href="{% static 'pdfs/csd_sixth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Seventh Semester: <a href="{% static 'pdfs/csd_seventh_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                        <li>Eighth Semester: <a href="{% static 'pdfs/csd_eighth_semester_timetable.pdf' %}" target="_blank">Download PDF</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

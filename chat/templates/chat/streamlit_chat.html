@@ -1,0 +1,37 @@
+<!-- streamlit_chat.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .iframe-container {
+            width: 100%;
+            max-width: 1200px; /* Adjust based on your preference */
+            height: 80vh; /* Adjust for suitable height */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>College Chatbot Interface</h1>
+    <iframe 
+        class="iframe-container" 
+        src="http://localhost:8501" 
+        frameborder="0">
+    </iframe>
+</body>
+</html>

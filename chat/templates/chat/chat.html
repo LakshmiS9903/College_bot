@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Chatbot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .back-home-link {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .history-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .history-item {
+            margin-bottom: 15px;
+        }
+        .history-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="text-center">Ask Your College Chatbot</h2>
+        </div>
+
+        <!-- Back to Home Button -->
+        <div class="back-home-link">
+            <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+        </div>
+
+        <!-- Chatbot Form -->
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="question">Your Question</label>
+                <input type="text" class="form-control" id="question" name="question" placeholder="Ask your question here" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Ask</button>
+        </form>
+
+        {% if response %}
+            <div class="mt-4">
+                <h5>Answer:</h5>
+                <p>{{ response }}</p>
+                <p><strong>Response Time:</strong> {{ response_time }} seconds</p>
+            </div>
+        {% endif %}
+
+        <!-- Search History -->
+        <div class="history-container">
+            <h5>FAQ:</h5>
+            {% if history %}
+                {% for item in history %}
+                    <div class="history-item">
+                        <strong>Question:</strong> {{ item.question }}<br>
+                        <strong>Answer:</strong> {{ item.answer }}<br>
+                        <small><em>Asked at: {{ item.timestamp }}</em></small>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No history available.</p>
+            {% endif %}
+        </div>
+        
+    </div>
+</body>
+</html>
